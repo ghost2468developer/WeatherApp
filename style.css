@@ -1,0 +1,102 @@
+form {
+  max-width: 500px;
+  display: block;
+  border: 1px solid gray;
+  padding: 30px;
+  padding-top: 10px;
+  border-radius: 5px;
+  margin: 30px auto;
+}
+
+h1 {
+  font-family: "Text Me One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 40px;
+}
+input {
+  font-family: "Text Me One", sans-serif;
+}
+h2 {
+  font-family: "Text Me One", sans-serif;
+  font-weight: 600;
+}
+#temp {
+  padding-top: 10px;
+  font-family: 300;
+  font-size: 60px;
+  float: right;
+  width: 45%;
+  line-height: 1.4;
+}
+#temp-emoji {
+  padding-top: 10px;
+  font-family: 300;
+  font-size: 60px;
+  float: right;
+  width: 45%;
+  line-height: 1.4;
+}
+
+h3 strong {
+  color: red;
+}
+/* STYLING SUBMIT BUTTON */
+#submit {
+  font-family: "Text Me One", sans-serif;
+  background-color: rgb(142, 78, 203);
+  color: aliceblue;
+}
+/* STYLING CURRENT WEATHER */
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* STYLING WEEKDAYS */
+h3 {
+  font-weight: lighter;
+  font-family: "Text Me One", sans-serif;
+  line-height: 1.2;
+}
+p {
+  font-family: "Text Me One", sans-serif;
+  line-height: 1.2;
+}
+#weekdays:after {
+  display: table;
+  padding-top: 50;
+}
+#mon {
+  width: 15%;
+  float: inline-start;
+}
+#tue {
+  width: 15%;
+  float: inline-start;
+}
+#wed {
+  width: 15%;
+  float: inline-start;
+}
+#thu {
+  width: 15%;
+  float: inline-start;
+}
+#fri {
+  width: 15%;
+  float: inline-start;
+}
+#sat {
+  width: 15%;
+  float: inline-start;
+}
+/* styling footer/copy right */
+#copy-right {
+  font-size: x-small;
+  font-style: italic;
+  color: rgb(194, 30, 30);
+  text-align: center;
+  padding-inline: 15%;
+}

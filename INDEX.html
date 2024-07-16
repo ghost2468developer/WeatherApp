@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Text+Me+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="waether-app">
+        <form id="search-City">
+          <h2>WEATHER APP</h2>
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="Enter city"
+              autocomplete="off"
+              autofocus="on"
+              size="50"
+              id="city-Name"
+            />
+            <input type="submit" value="Search" id="submit" />
+          </div>
+          <div class="row">
+            <div class="column">
+              <h1 class="current-city" id="current-city">Pretoria</h1>
+              <h3 id="currentDate">Sunday, 22 June 2024, 15:23<br /></h3>
+              <h3>
+                Humidity <strong>87%</strong> wind <strong>7.5 km/h</strong>
+              </h3>
+            </div>
+            <div class="column">
+              <p id="temp-emoji">☀️</p>
+              <span><p id="temp">12°C</p></span>
+            </div>
+          </div>
+          <div></div>
+
+          <!-- WEEKDAYS -->
+          <div class="row" id="weekdays">
+            <div class="column" id="mon">
+              <p>
+                Mon <br />
+                🌥️ <br />
+                <span id="first">16° 22°</span>
+              </p>
+            </div>
+
+            <div class="column" id="tue">
+              <p>
+                Tue <br />
+                ⛅ <br />
+                <span id="second">16° 22°</span>
+              </p>
+            </div>
+
+            <div class="column" id="wed">
+              <p>
+                Wed <br />
+                ☀️ <br />
+                <span id="third">16° 22°</span>
+              </p>
+            </div>
+            <div class="column" id="thu">
+              <p>
+                Thu <br />
+                ☀️ <br />
+                <span id="forth">16° 22°</span>
+              </p>
+            </div>
+            <div class="column" id="fri">
+              <p>
+                Fri <br />
+                🌥️ <br />
+                <span id="fith">16° 22°</span>
+              </p>
+            </div>
+            <div class="column" id="sat">
+              <p>
+                Sat <br />
+                🌧️ <br />
+                <span id="sixth">16° 22°</span>
+              </p>
+            </div>
+          </div>
+          <!-- CODE FOR COPY RIGHT -->
+          <div id="copy-right">
+            <p>This app was Created by Aretha Kgaabi</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="javaScrip.js"></script>
+  </body>
+</html>
