@@ -11,6 +11,8 @@ function CurrentTemperature(response) {
   tempElement.innerHTML = `${temp}°C`;
   humidityElement.innerHTML = `Humidity:${response.data.temperature.humidity}%`;
   windElement.innerHTML = `Wind:${response.data.wind.speed} km/h`;
+
+  getWeatherForecast(response.data.city);
 }
 
 //FORM FUNCTION(INPUT )
@@ -57,12 +59,6 @@ function getWeatheIcon(icon) {
   return icons[icon] || "❓";
 }
 
-function getWeatherForecast(city) {
-  let apikey = "btad2798317eea8fb2a646fa879ofa05";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}`;
-  axios.get(apiUrl).then(updateCurrentDay);
-}
-
 let form = document.querySelector("#search-City");
 form.addEventListener("submit", function (event) {
   search(event);
@@ -101,17 +97,33 @@ document.getElementById(
 ).innerHTML = `${day}, ${date} ${month} ${year}, ${hours}:${
   minutes < 10 ? "0" + minutes : minutes
 } `;
-
-//Initialize with default city
-getWeatherForecast("Pretoria");
-
-//Monday weather
-function monday(response) {
-  let firstElement = document.querySelector("#first");
-  let first = Math.round(response.data.temperature.forecast);
-  firstElement.innerHTML = `${first}`;
-
+//function get weather forecast
+function getWeatherForecast(city) {
   let apikey = "btad2798317eea8fb2a646fa879ofa05";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}`;
-  axios.get(apiUrl).then(monday);
+  axios.get(apiUrl).then(displayforecast);
 }
+//Weather forecast for next 5 days
+function displayforecast(response) {
+  console.log(response);
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weekdays-forecast">
+    <div class="day-of-week">${day}</div>
+    <div class="icon">🌥️</div>
+    <div class="forecast-temp">
+      <div class="temperature-forecast"><strong>16°</strong></div>
+      <div class="temperature-forecast">22°</div>
+    </div>
+  </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+//Initialize with default city
+
+displayforecast();
