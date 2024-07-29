@@ -1,18 +1,23 @@
-form {
-  max-width: 500px;
-  display: block;
-  border: 1px solid gray;
-  padding: 30px;
-  padding-top: 10px;
-  border-radius: 5px;
-  margin: 30px auto;
+body {
+  background-color: rgb(244, 250, 250);
+  form {
+    background-image: url("pexels-padrinan-19670.jpg");
+    background-size: auto;
+    max-width: 70%;
+    display: block;
+    border: 1px solid rgb(222, 211, 211);
+    box-shadow: 0 30px 50px rgb(241, 225, 225);
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 5px;
+    margin: 30px auto;
+  }
 }
 
 h1 {
   font-family: "Text Me One", sans-serif;
   font-weight: 400;
   font-style: normal;
-
   font-size: 40px;
 }
 input {
@@ -22,6 +27,7 @@ h2 {
   font-family: "Text Me One", sans-serif;
   font-weight: 600;
 }
+
 #temp {
   padding-top: 10px;
   font-family: 300;
@@ -64,34 +70,33 @@ p {
   font-family: "Text Me One", sans-serif;
   line-height: 1.2;
 }
-#weekdays:after {
-  display: table;
-  padding-top: 50;
+/* STYLING WEATHER FORECAST */
+.row {
+  font-family: "Text Me One", sans-serif;
+  display: flex;
+  justify-content: space-around;
 }
-#mon {
-  width: 15%;
-  float: inline-start;
+.day-of-week {
+  text-align: center;
+  color: rgb(150, 145, 145);
+  line-height: 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
-#tue {
-  width: 15%;
-  float: inline-start;
+.icon {
+  text-align: center;
 }
-#wed {
-  width: 15%;
-  float: inline-start;
+.forecast-temp {
+  text-align: center;
+  color: rgb(244, 161, 161);
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
 }
-#thu {
-  width: 15%;
-  float: inline-start;
+.temperature-forecast {
+  padding: 0 10px;
 }
-#fri {
-  width: 15%;
-  float: inline-start;
-}
-#sat {
-  width: 15%;
-  float: inline-start;
-}
+
 /* styling footer/copy right */
 #copy-right {
   font-size: x-small;
