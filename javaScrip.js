@@ -26,23 +26,23 @@ function search(event) {
   axios.get(apiUrl).then(CurrentTemperature);
 }
 
-//WEATHER FORCAST(CURRENT DAY)
-function updateCurrentDay(response) {
-  let day = response.date.daily;
+// //WEATHER FORCAST(CURRENT DAY)
+// function updateCurrentDay(response) {
+//   let day = response.date.daily;
 
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach((day, index) => {
-    let currentDayElement = document.querySelector(`#${day}`);
-    let currentDay = day[index];
-    currentDayElement.innerHTML = `<p>${
-      days[index].charAt(0).toLocaleUpperCase() + days[index].slice(1)
-    }<br/>
-  ${getWeatheIcon(currentDay.condition.icon)}<br/><span>${Math.round(
-      currentDay.temperature.min
-    )}° ${Math.round(currentDay.temperature.max)}°</span>
-  </P>`;
-  });
-}
+//   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+//   days.forEach((day, index) => {
+//     let currentDayElement = document.querySelector(`#${day}`);
+//     let currentDay = day[index];
+//     currentDayElement.innerHTML = `<p>${
+//       days[index].charAt(0).toLocaleUpperCase() + days[index].slice(1)
+//     }<br/>
+//   ${getWeatheIcon(currentDay.condition.icon)}<br/><span>${Math.round(
+//       currentDay.temperature.min
+//     )}° ${Math.round(currentDay.temperature.max)}°</span>
+//   </P>`;
+//   });
+// }
 
 //weather icons
 function getWeatheIcon(icon) {
